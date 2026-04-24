@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F8F9FA"
+    tools:context=".PembayaranAngsuranActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="15dp">
+
+            <ImageButton
+                android:id="@+id/btnBackHeader"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/btn_kembali"
+                android:onClick="KlikBack"
+                android:src="@drawable/ic_back_white"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/btnBackHeader"
+                android:text="@string/title_pembayaran"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_invoice"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/SpinnerInvoice"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@android:drawable/btn_dropdown" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_tgl_bayar"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editTglBayar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F0F0F0"
+                        android:hint="@string/label_tgl_bayar"
+                        android:autofillHints="none"
+                        android:inputType="date"
+                        android:padding="10dp"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_angsuran_ke"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editAngsuranKe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F0F0F0"
+                        android:autofillHints="none"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_jumlah_bayar"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editBayar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F0F0F0"
+                        android:autofillHints="none"
+                        android:inputType="numberDecimal"
+                        android:padding="10dp"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:id="@+id/txtInfoSisa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/label_data_pembayaran"
+                        android:textColor="@color/black"
+                        android:textStyle="italic" />
+
+                    <LinearLayout
+                        style="?android:attr/buttonBarStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnSimpanBayar"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:onClick="KlikSimpanPembayaran"
+                            android:text="@string/btn_simpan_pembayaran"
+                            android:textColor="@color/white"
+                            app:cornerRadius="8dp" />
+
+                        <Button
+                            android:id="@+id/btnResetBayar"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#FF9800"
+                            android:onClick="KlikResetPembayaran"
+                            android:text="@string/btn_reset"
+                            android:textColor="@color/white"
+                            app:cornerRadius="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/label_data_pembayaran"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableLayout
+                        android:id="@+id/tbPembayaran"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:stretchColumns="*" />
+                </HorizontalScrollView>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnBackPembayaran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="#607D8B"
+                android:onClick="KlikBack"
+                android:text="@string/btn_kembali"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

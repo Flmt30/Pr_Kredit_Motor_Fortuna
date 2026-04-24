@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F2F5"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Modern Header Section -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:background="@color/colorPrimary"
+            android:padding="24dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:alpha="0.2"
+                android:src="@android:drawable/ic_menu_gallery"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/tvWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Selamat Datang,"
+                android:textColor="#D1D9FF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvWelcome"
+                android:text="Fortuna Motor"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBrand"
+                android:layout_marginTop="4dp"
+                android:text="Sistem Manajemen Kredit Terpadu"
+                android:textColor="#A0ACFF" />
+        </RelativeLayout>
+
+        <!-- Menu Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-50dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Data Petugas Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btDataPetugasHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <View
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/ic_launcher_background"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="#E8EAF6"
+                        android:padding="10dp"
+                        android:src="@android:drawable/ic_menu_edit"
+                        app:tint="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Data Petugas"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kelola informasi staf dan petugas"
+                            android:textColor="#757575"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_media_play"
+                        android:alpha="0.3"
+                        app:tint="@color/black" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Data Kreditor Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btDataKreditorHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="#E1F5FE"
+                        android:padding="10dp"
+                        android:src="@android:drawable/ic_menu_myplaces"
+                        app:tint="#0288D1" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Data Kreditor"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Manajemen data nasabah kredit"
+                            android:textColor="#757575"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_media_play"
+                        android:alpha="0.3"
+                        app:tint="@color/black" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Data Motor Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btDataMotorHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="#FFF8E1"
+                        android:padding="10dp"
+                        android:src="@android:drawable/ic_dialog_map"
+                        app:tint="#F57C00" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Data Motor"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Daftar unit dan stok kendaraan"
+                            android:textColor="#757575"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_media_play"
+                        android:alpha="0.3"
+                        app:tint="@color/black" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <Button
+                android:id="@+id/btKeluar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/error_red"
+                android:text="Keluar Aplikasi"
+                android:textColor="@color/white"
+                android:onClick="KlikbtKeluar"
+                app:cornerRadius="12dp"
+                android:padding="12dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

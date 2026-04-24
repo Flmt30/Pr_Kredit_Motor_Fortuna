@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="colorPrimary">#1A237E</color> <!-- Navy Blue -->
+    <color name="colorPrimaryDark">#121858</color>
+    <color name="colorAccent">#FFC107</color> <!-- Gold/Amber -->
+
+    <!-- Secondary Colors -->
+    <color name="blue_light">#534BAE</color>
+    <color name="background_gray">#F5F5F5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#212121</color>
+
+    <!-- Status Colors -->
+    <color name="error_red">#D32F2F</color>
+    <color name="success_green">#388E3C</color>
+</resources>

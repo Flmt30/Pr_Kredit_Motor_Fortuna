@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F9FA"
+    tools:context=".DataKreditorActivity">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="15dp">
+
+        <ImageButton
+            android:id="@+id/btnBackHeader"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:onClick="KlikBack"
+            android:src="@drawable/ic_back_white"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/btnBackHeader"
+            android:text="@string/btn_data_kreditor"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top Action Button -->
+        <Button
+            android:id="@+id/btTambahKreditor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/btn_tambah_kreditor"
+            android:textColor="@color/white"
+            app:cornerRadius="8dp"
+            android:onClick="KlikbtTambahKreditor" />
+
+        <!-- Data Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="horizontal|vertical">
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TableLayout
+                        android:id="@+id/tbKreditor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="*">
+
+                        <TableRow
+                            android:background="#EEEEEE"
+                            android:padding="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:text="Kd-Kreditor"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:text="Nama"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:text="Alamat"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:text="Telp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:text="Pekerjaan"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                        </TableRow>
+                    </TableLayout>
+                </ScrollView>
+            </HorizontalScrollView>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Bottom Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btRefreshDataKreditor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#607D8B"
+                android:text="@string/btn_refresh"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp"
+                android:onClick="KlikbtRefreshDataKreditor" />
+
+            <Button
+                android:id="@+id/btExitDataKreditor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/error_red"
+                android:text="Kembali"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp"
+                android:onClick="KlikbtExitDataKreditor" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

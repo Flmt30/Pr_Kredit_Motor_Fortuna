@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F8F9FA"
+    tools:context=".PengajuanKreditActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="15dp">
+
+            <ImageButton
+                android:id="@+id/btnBackHeader"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:onClick="KlikBack"
+                android:src="@drawable/ic_back_white"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/btnBackHeader"
+                android:text="PENGAJUAN KREDIT"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Selection Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kreditor"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/SpinnerNamaKreditor"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/TextNamaKreditor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:padding="8dp"
+                        android:background="#EEEEEE"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/TextAlamatKreditor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Alamat"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Motor"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/SpinnerNamaMotor"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/TextNamaMotor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:padding="8dp"
+                        android:background="#EEEEEE"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harga Motor"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textHargaMotor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:padding="8dp"
+                        android:background="#EEEEEE" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Input Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DP / Uang Muka"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editUangMuka"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="Masukkan DP" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Bunga /Tahun (%)"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editBunga"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="Contoh: 10" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Lama Angsuran (Bulan)"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editLamaAngsuran"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="Contoh: 12"
+                        android:layout_marginBottom="16dp" />
+
+                    <Button
+                        android:id="@+id/buttonProsesPengajuanKredit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorAccent"
+                        android:text="Hitung Kredit"
+                        android:textColor="@color/white"
+                        app:cornerRadius="8dp"
+                        android:onClick="KlikbuttonProsesPengajuanKredit" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Calculation Results -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#E3F2FD">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HASIL PERHITUNGAN"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/textHargaKredit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harga Kredit: 0"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/textTotalKredit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Kredit: 0"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/textAngsuranPerbulan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Angsuran/Bulan: 0"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Final Actions -->
+            <Button
+                android:id="@+id/buttonSimpanPengajuanKredit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Simpan Data"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp"
+                android:onClick="KlikbuttonSimpanPengajuanKredit" />
+
+            <Button
+                android:id="@+id/buttonResetKredit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#607D8B"
+                android:text="Reset Form"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp"
+                android:onClick="KlikbuttonResetKredit"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laporan Pengajuan:"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Table Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+                    <TableLayout
+                        android:id="@+id/tbKredit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="*" />
+                </HorizontalScrollView>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

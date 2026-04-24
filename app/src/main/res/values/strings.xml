@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Pr_Kredit_Motor_Fortuna_TI.S1.E.23.3.605</string>
+    <string name="title_transaksi">TRANSAKSI</string>
+    <string name="btn_transaksi_pengajuan">Transaksi Pengajuan</string>
+    <string name="btn_pembayaran_angsuran">Pembayaran Angsuran</string>
+    <string name="btn_data_pengajuan_kredit">Data Pengajuan Kredit</string>
+    <string name="btn_data_pembayaran_angsuran">Data Pembayaran Angsuran</string>
+    <string name="btn_data_petugas">Data Petugas</string>
+    <string name="btn_tambah_petugas">Tambah Petugas</string>
+    <string name="title_daftar_petugas">DAFTAR PETUGAS</string>
+    <string name="title_data_motor">Data Motor</string>
+    <string name="btn_tambah_motor">Tambah Data Motor</string>
+    <string name="btn_refresh">Refresh</string>
+    <string name="title_home">Halaman Home</string>
+    <string name="btn_data_kreditor">Data Kreditor</string>
+    <string name="btn_tambah_kreditor">Tambah Kreditor</string>
+    <string name="title_about">Tentang Aplikasi</string>
+    <string name="label_created_by">Dibuat Oleh:</string>
+    <string name="author_name">Fortuna Putri</string>
+    <string name="author_id">1123090161</string>
+    <string name="title_laporan_pembayaran">LAPORAN DATA PEMBAYARAN</string>
+    <string name="btn_kembali">Kembali</string>
+    <string name="label_kode">Kode = %1$s</string>
+    <string name="title_pembayaran">PEMBAYARAN ANGSURAN</string>
+    <string name="label_invoice">Invoice</string>
+    <string name="label_tgl_bayar">Tanggal Bayar (YYYY-MM-DD)</string>
+    <string name="label_angsuran_ke">Angsuran Ke</string>
+    <string name="label_jumlah_bayar">Jumlah Bayar</string>
+    <string name="label_data_pembayaran">Data Pembayaran:</string>
+    <string name="btn_simpan_pembayaran">Simpan Pembayaran</string>
+    <string name="btn_reset">Reset</string>
+    <string name="status_lunas">STATUS: LUNAS (Sudah bayar %1$dx)</string>
+    <string name="sisa_angsuran">Sisa Angsuran: %1$d kali lagi (Tenor: %2$dx)</string>
+    <string name="toast_lengkapi_data">Lengkapi data pembayaran!</string>
+</resources>
